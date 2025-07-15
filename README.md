@@ -24,14 +24,6 @@ minikube start
 kubectl apply -f deployment.yaml service.yaml
 minikube service myapp-service
 
-## Project Structure
-.
-├── app/                # Your code
-├── Dockerfile
-├── .github/workflows/  # CI config
-├── deployment.yaml
-└── service.yaml
-
 ## Secrets
 DOCKER_USERNAME
 DOCKER_PASSWORD
