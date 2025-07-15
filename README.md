@@ -1,18 +1,14 @@
-# 🚀 DevOps Pipeline: Docker + GitHub Actions + Kubernetes
-
+# DevOps Pipeline: Docker + GitHub Actions + Kubernetes
 A minimal CI/CD demo that builds a Docker image on push, pushes to Docker Hub, and deploys locally via Minikube.
 
 ---
 
 ## 🛠️ Tech Stack
-
 - **GitHub Actions** (CI)
 - **Docker** (container)
 - **Kubernetes** + **Minikube** (orchestration)
 
----
-
-## ⚡ Quick Start
+## Quick Start
 
 1. **Clone & configure**  
    ```bash
@@ -28,7 +24,7 @@ minikube start
 kubectl apply -f deployment.yaml service.yaml
 minikube service myapp-service
 
-## 📂 Project Structure
+## Project Structure
 .
 ├── app/                # Your code
 ├── Dockerfile
@@ -36,6 +32,6 @@ minikube service myapp-service
 ├── deployment.yaml
 └── service.yaml
 
-## 🔒 Secrets
+## Secrets
 DOCKER_USERNAME
 DOCKER_PASSWORD
