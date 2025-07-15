@@ -1,0 +1,13 @@
+#exposes app to the browser
+apiVersion: v1
+kind: Service
+metadata:
+  name: main-service
+spec:
+  type: NodePort
+  selector:
+    app: main
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
