@@ -1,29 +1,33 @@
-# DevOps Pipeline: Docker + GitHub Actions + Kubernetes
-A minimal CI/CD demo that builds a Docker image on push, pushes to Docker Hub, and deploys locally via Minikube.
+# CI/CD DevOps Pipeline: Docker + GitHub Actions + Kubernetes
+A complete CI/CD pipeline that builds, tests, pushes a Dockerized app using **GitHub Actions**, and deploys it to a local **Kubernetes** cluster with **Minikube**.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **GitHub Actions** (CI)
 - **Docker** (container)
 - **Kubernetes** + **Minikube** (orchestration)
 
-## Quick Start
+## Features
 
-1. **Clone & configure**  
-   ```bash
-   git clone https://github.com/yourusername/devops-pipeline.git
-   cd devops-pipeline
+- ✅ Automated Docker build & push on every commit  
+- ✅ Kubernetes deployment using YAML config  
+- ✅ Local app access via `minikube service`  
+- ✅ Uses GitHub Secrets for Docker auth
 
-2. **Build & Push image**
-docker build -t yourusername/yourapp .
-docker push yourusername/yourapp
+## ⚙️ How to Run (Local Dev)
 
-3. **Deploy locally**
+```bash
+# 1. Start Kubernetes cluster
 minikube start
-kubectl apply -f deployment.yaml service.yaml
+
+# 2. Deploy app
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+# 3. Access in browser
 minikube service myapp-service
 
-## Secrets
+## Secrets required
 DOCKER_USERNAME
 DOCKER_PASSWORD
